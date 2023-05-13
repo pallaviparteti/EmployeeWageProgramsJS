@@ -1,23 +1,25 @@
 console.log("Welcome To Employee Wage Problems");
-//UC2
+//UC3
 const IS_NO_TIME = 0;
 const IS_PART_TIME = 1;
 const IS_FULL_TIME = 2;
 const PART_TIME_HOURS = 4;
 const FULL_TIME_HOURS = 8;
 const WAGE_PER_HOURS = 20;
-let empHrs = 0;
-let empCheck = Math.floor(Math.random()*10) % 3;
+function getWorkingHours(empCheck){
 switch (empCheck){
     case IS_PART_TIME :
         empHrs = PART_TIME_HOURS;
-        break;
+        return PART_TIME_HOURS;
         case IS_FULL_TIME :
-            empHrs = IS_FULL_TIME;
-            break;
+            empHrs = FULL_TIME_HOURS;
+          return FULL_TIME_HOURS;
             default :
-            empHrs = IS_NO_TIME;
+            return 0;
 }
+}
+let empHrs = 0;
+let empCheck = Math.floor(Math.random()*10) % 3;
+empHrs = getWorkingHours(empCheck);
 let employeeWage = empHrs * WAGE_PER_HOURS;
 console.log("Employee daily wage :" + employeeWage);
-
