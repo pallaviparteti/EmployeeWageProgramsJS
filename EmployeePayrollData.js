@@ -51,11 +51,11 @@ class EmployeePayrollData {
 
 }
 
-let employeePayrollData = new EmployeePayrollData(1, "Shephali", 45699);
+let employeePayrollData = new EmployeePayrollData(1, "Pallavi", 45699);
 console.log(employeePayrollData.toString());
 employeePayrollData.id = 2;
 try {
-    employeePayrollData.name = "Shephali";
+    employeePayrollData.name = "Pallavi";
     console.log(employeePayrollData.toString());
 } catch (e) {
     console.error("the name should starts with capital and has at least 3 characters");
@@ -64,7 +64,7 @@ try {
 
 employeePayrollData.salary = 30000;
 console.log(employeePayrollData.toString());
-let newEmployeePayrollData = new EmployeePayrollData(1, "Shephali", 45699, "F", new Date());
+let newEmployeePayrollData = new EmployeePayrollData(1, "Pallavi", 45699, "F", new Date());
 console.log(newEmployeePayrollData.toString());
 
 
